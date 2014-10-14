@@ -1,0 +1,55 @@
+==================
+ Mediagoblin SCAD
+==================
+
+This plugin adds the SCAD mediatype to GNU Mediagoblin. Upload a .scad file and it will be rendered by an OpenSCAD instance running on the server.
+
+This plugin is licensed under the GNU APGL v3+.
+
+Installation
+============
+
+If you've checked out this plugin and mediagoblin in the same parent
+directory, you should be able to build and install with
+
+    ../mediagoblin/bin/python setup.py build
+    ../mediagoblin/bin/python setup.py install
+
+Tests
+=====
+
+After installing, run the built-in unit tests by invoking `python2
+setup.py test` in the root directory. The tests require an installed
+version of GNU MediaGoblin to be available for importing. If you've
+checked out this plugin and mediagoblin in the same parent directory,
+you should be able to run
+
+    ../mediagoblin/bin/python setup.py test
+
+
+Updating gettext
+================
+
+To create/update the English .pot template file from the translatable
+strings in the source code:
+
+    ../mediagoblin/bin/pybabel extract -F babel.ini -o mediagoblin_scad/i18n/en/LC_MESSAGES/mediagoblin_scad.pot .
+
+To create a new .po file for language "nn_NO":
+
+    ../mediagoblin/bin/pybabel init -D mediagoblin_scad -i mediagoblin_scad/i18n/en/LC_MESSAGES/mediagoblin_scad.pot -d mediagoblin_scad/i18n/ -l nn_NO
+
+To compile translated .po files into installable .mo files:
+
+    ../mediagoblin/bin/pybabel compile -D mediagoblin_scad -d mediagoblin_scad/i18n/
+
+To update previously created .po files with new messages after the
+.pot file changed:
+
+     ../mediagoblin/bin/pybabel update -D mediagoblin_scad -i mediagoblin_scad/i18n/en/LC_MESSAGES/mediagoblin_scad.pot -d mediagoblin_scad/i18n/
+
+
+TODO
+====
+
+* Make it actually work.

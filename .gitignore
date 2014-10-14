@@ -1,0 +1,12 @@
+build/
+dist/
+mediagoblin.db
+mediagoblin_scad.egg-info/
+mediagoblin_scad/templates/mediagoblin/plugins/scad/mediagoblin_scad.egg-info/
+**/*.mo
+**/__pycache__/
+**/*.pyc
+user_dev/
+*~
+*#
+*pyc

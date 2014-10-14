@@ -1,0 +1,6 @@
+include README*
+recursive-include mediagoblin_scad *.html
+recursive-include mediagoblin_scad *.mo
+recursive-include mediagoblin_scad *.png
+recursive-include mediagoblin_scad *.svg
+recursive-include mediagoblin_scad *.csv
